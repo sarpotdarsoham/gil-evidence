@@ -1,0 +1,14 @@
+{
+  "plan_sha256": "56723140158768c86103f399da98c2677dc27b317ff34dd76e44c604b2344957",
+  "analyzer_sha256": "3585996f255fe38cb9e9f008e8d1352eaee6e7d2cf5bbded2843c0f80e4acf43",
+  "capture_script_sha256": "c170feea0372a6acef445485a297775641cd7b164cbd41b3fb7968a1bfac4989",
+  "repositories_completed": 8,
+  "totals": {
+    "query_text": 4,
+    "cooccurrence": 1,
+    "direct_ast": 0,
+    "findings": 0,
+    "error": 9,
+    "eligible_files": 2390
+  }
+}

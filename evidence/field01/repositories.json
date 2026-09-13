@@ -1,0 +1,151 @@
+[
+  {
+    "repository": "cython/cython",
+    "retrieved_utc": "2026-09-13T05:11:06.233352+00:00",
+    "excluded": [
+      {
+        "path": "tests/run/extsubscript.py",
+        "reason": "over 1MB"
+      }
+    ],
+    "commit": "dbbbdbb97f116c46495b5ab88ba0195a277016f9",
+    "default_branch": "master",
+    "archive_url": "https://codeload.github.com/cython/cython/tar.gz/dbbbdbb97f116c46495b5ab88ba0195a277016f9",
+    "archive_sha256": "c9fa316be39ecf1320619a1bbe4d7ed11d1fdb100d99dd60d4e32e2e81358b7e",
+    "status": "completed",
+    "summary": {
+      "query_text": 0,
+      "cooccurrence": 0,
+      "direct_ast": 0,
+      "findings": 0,
+      "error": 8,
+      "eligible_files": 165
+    }
+  },
+  {
+    "repository": "h5py/h5py",
+    "retrieved_utc": "2026-09-13T05:11:04.377316+00:00",
+    "excluded": [],
+    "commit": "642ee62a2916f114d0fc86c7daf4a6f14fe0e13d",
+    "default_branch": "master",
+    "archive_url": "https://codeload.github.com/h5py/h5py/tar.gz/642ee62a2916f114d0fc86c7daf4a6f14fe0e13d",
+    "archive_sha256": "75db48a77aee50684d8db44fef87b24293ec9f1e952d01b29f1d59e301b09f53",
+    "status": "completed",
+    "summary": {
+      "query_text": 0,
+      "cooccurrence": 0,
+      "direct_ast": 0,
+      "findings": 0,
+      "error": 0,
+      "eligible_files": 44
+    }
+  },
+  {
+    "repository": "numpy/numpy",
+    "retrieved_utc": "2026-09-13T05:10:56.641560+00:00",
+    "excluded": [],
+    "commit": "e80572f1407205a37182e3ec9a276f4ea698b163",
+    "default_branch": "main",
+    "archive_url": "https://codeload.github.com/numpy/numpy/tar.gz/e80572f1407205a37182e3ec9a276f4ea698b163",
+    "archive_sha256": "55b4da5b5a6e329dea84e2f1c91af8c3249c27b8c8dc4a1bc763e647483c28dd",
+    "status": "completed",
+    "summary": {
+      "query_text": 2,
+      "cooccurrence": 1,
+      "direct_ast": 0,
+      "findings": 0,
+      "error": 1,
+      "eligible_files": 259
+    }
+  },
+  {
+    "repository": "pandas-dev/pandas",
+    "retrieved_utc": "2026-09-13T05:10:56.642626+00:00",
+    "excluded": [],
+    "commit": "14de06cf28232d7b5cc2b1a2b58fbc59a815db2d",
+    "default_branch": "main",
+    "archive_url": "https://codeload.github.com/pandas-dev/pandas/tar.gz/14de06cf28232d7b5cc2b1a2b58fbc59a815db2d",
+    "archive_sha256": "92c8d92ff480606fe0ee2bfc1a1b43b0e92554c4aa7545a19e47259506956280",
+    "status": "completed",
+    "summary": {
+      "query_text": 0,
+      "cooccurrence": 0,
+      "direct_ast": 0,
+      "findings": 0,
+      "error": 0,
+      "eligible_files": 1137
+    }
+  },
+  {
+    "repository": "pyca/cryptography",
+    "retrieved_utc": "2026-09-13T05:11:08.305561+00:00",
+    "excluded": [],
+    "commit": "24a62923a0b291d94161e3d2d49b829f9fff6842",
+    "default_branch": "main",
+    "archive_url": "https://codeload.github.com/pyca/cryptography/tar.gz/24a62923a0b291d94161e3d2d49b829f9fff6842",
+    "archive_sha256": "5d07fad965a1f5331aac94a8effca2dd2287bd741c5802b789f90f5052d8a001",
+    "status": "completed",
+    "summary": {
+      "query_text": 0,
+      "cooccurrence": 0,
+      "direct_ast": 0,
+      "findings": 0,
+      "error": 0,
+      "eligible_files": 117
+    }
+  },
+  {
+    "repository": "python-cffi/cffi",
+    "retrieved_utc": "2026-09-13T05:11:07.686144+00:00",
+    "excluded": [],
+    "commit": "a8520676f8c45082a850ba8dc703d5bd936c30ce",
+    "default_branch": "main",
+    "archive_url": "https://codeload.github.com/python-cffi/cffi/tar.gz/a8520676f8c45082a850ba8dc703d5bd936c30ce",
+    "archive_sha256": "2b52ca0041a7c968da67757fed64be5362c21fde850637db65aee22238e6e17a",
+    "status": "completed",
+    "summary": {
+      "query_text": 1,
+      "cooccurrence": 0,
+      "direct_ast": 0,
+      "findings": 0,
+      "error": 0,
+      "eligible_files": 73
+    }
+  },
+  {
+    "repository": "python-pillow/Pillow",
+    "retrieved_utc": "2026-09-13T05:11:01.780945+00:00",
+    "excluded": [],
+    "commit": "a707c6b21c313880d0771e54965d142dd42358b6",
+    "default_branch": "main",
+    "archive_url": "https://codeload.github.com/python-pillow/Pillow/tar.gz/a707c6b21c313880d0771e54965d142dd42358b6",
+    "archive_sha256": "55e2b0baa825814770a61b8c85b198b6b9dabc6f131a7f213be7c06ea11ebd89",
+    "status": "completed",
+    "summary": {
+      "query_text": 1,
+      "cooccurrence": 0,
+      "direct_ast": 0,
+      "findings": 0,
+      "error": 0,
+      "eligible_files": 175
+    }
+  },
+  {
+    "repository": "scipy/scipy",
+    "retrieved_utc": "2026-09-13T05:10:56.642016+00:00",
+    "excluded": [],
+    "commit": "db962647dacc51f8e6211523f9d15f90bb4655de",
+    "default_branch": "main",
+    "archive_url": "https://codeload.github.com/scipy/scipy/tar.gz/db962647dacc51f8e6211523f9d15f90bb4655de",
+    "archive_sha256": "bdaceb638da852461f22b25db29190449bbd353de1d048e70382b17d78624fe8",
+    "status": "completed",
+    "summary": {
+      "query_text": 0,
+      "cooccurrence": 0,
+      "direct_ast": 0,
+      "findings": 0,
+      "error": 0,
+      "eligible_files": 420
+    }
+  }
+]

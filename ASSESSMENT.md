@@ -40,3 +40,7 @@ These are research decision criteria, not promised results. If fresh evidence sh
 [JOSS submission criteria](https://joss.readthedocs.io/en/latest/submitting.html), checked during this assessment, require sustained public development history, demonstrated research use and more than a minor utility. This new repository does not satisfy the immediate submission criteria. Creating artificial history would not address that gap.
 
 SoftwareX and Software Impacts remain possible formats to investigate, not approved targets. The previously inspected publisher material is insufficient to establish current eligibility or likely acceptance. No venue acceptance, publication date, or submission readiness is promised.
+
+## Fixed-cohort follow-up
+
+A frozen eight-repository follow-up examined 2,390 eligible Python files, finding four query-text files, one text-co-occurrence flag, and no direct-AST or analyzer flags. Nine parse failures were retained explicitly. No practical advantage was established; see the [full field study and reproduction records](evidence/field01/REPORT.md). Submission remains a no-go.

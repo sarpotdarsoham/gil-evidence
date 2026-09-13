@@ -1,0 +1,26 @@
+{
+  "created_utc": "2026-09-13T05:10:04.117926+00:00",
+  "question": "Does the frozen skip-guard analyzer identify useful state-masking candidates beyond simple file-level triage in a fixed new source cohort?",
+  "repositories": [
+    "numpy/numpy",
+    "scipy/scipy",
+    "pandas-dev/pandas",
+    "python-pillow/Pillow",
+    "h5py/h5py",
+    "cython/cython",
+    "python-cffi/cffi",
+    "pyca/cryptography"
+  ],
+  "selection": "Purposive established Python/native-extension projects outside the prior 30-package selected-source inventory. Not random, independent human selection, or guaranteed previously unseen in broader research history. No replacement for unavailable repositories.",
+  "revision_rule": "Default branch HEAD resolved once before source download, then pinned commit used.",
+  "eligibility": "Every UTF-8 .py regular file <=1MB in pinned archive, with test in any path component or basename conftest.py. Retain all eligible file records including those without query text. No exclusion for negative results.",
+  "baselines": {
+    "query_text": "file contains _is_gil_enabled",
+    "cooccurrence": "file contains _is_gil_enabled, skipif, and assert",
+    "direct_ast": "direct function/class skipif query and direct negated query assertion, no aliases/helpers"
+  },
+  "analysis_sha256": "3585996f255fe38cb9e9f008e8d1352eaee6e7d2cf5bbded2843c0f80e4acf43",
+  "analysis_rule": "Freeze implementation. Analyze all eligible files containing skipif; record parse/errors and no-query files. File-level warning counts are triage counts, not accuracy. Inspect every analyzer-positive file and all cooccurrence-positive misses. No execution of third-party suites in this phase.",
+  "decision": "If no additional confirmed practical value is found, do not claim publication readiness. Source candidates alone require full-suite/context verification. Baseline-negative files are not ground-truth negatives.",
+  "bounds": "8 repositories, at most 60MB compressed each. No replacement or cherry-picking."
+}

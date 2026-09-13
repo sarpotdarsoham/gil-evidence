@@ -1,0 +1,8 @@
+{
+  "reproduced_file_records": 2390,
+  "all_eight_repository_classifications_identical": true,
+  "portable_unit_test_methods_passed": 33,
+  "analyzer_unchanged": true,
+  "reproduction_script_sha256": "f6a24ad90f3ebd72654ccdd915772cef3069cefa270a5657fb9e14d210b464c2",
+  "note": "Reproduction by the same agent from the retained pinned archive bytes. Not independent human validation."
+}
