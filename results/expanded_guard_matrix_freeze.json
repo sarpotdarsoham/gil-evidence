@@ -1,0 +1,223 @@
+{
+  "created_utc": "2026-09-13T03:11:49.493420+00:00",
+  "analyzer_sha256": "4cf4782a2f22c8ba00e83330a9fdfb6306b36a0fe625681115de5ec2c855942a",
+  "cases": [
+    {
+      "id": "direct_function",
+      "form": "direct",
+      "scope": "function",
+      "source_template": "import sys\nimport sysconfig\nimport pytest\nimport {module}\n\n@pytest.mark.skipif(sys._is_gil_enabled(), reason=\"Fixture state check\")\ndef test_gil():\n    assert not sys._is_gil_enabled()\n"
+    },
+    {
+      "id": "direct_class",
+      "form": "direct",
+      "scope": "class",
+      "source_template": "import sys\nimport sysconfig\nimport pytest\nimport {module}\n\n@pytest.mark.skipif(sys._is_gil_enabled(), reason=\"Fixture state check\")\nclass TestGIL:\n    def test_gil(self):\n        assert not sys._is_gil_enabled()\n"
+    },
+    {
+      "id": "direct_module",
+      "form": "direct",
+      "scope": "module",
+      "source_template": "import sys\nimport sysconfig\nimport pytest\nimport {module}\n\npytestmark = pytest.mark.skipif(sys._is_gil_enabled(), reason=\"Fixture state check\")\ndef test_gil():\n    assert not sys._is_gil_enabled()\n"
+    },
+    {
+      "id": "identity_negated_function",
+      "form": "identity_negated",
+      "scope": "function",
+      "source_template": "import sys\nimport sysconfig\nimport pytest\nimport {module}\n\n@pytest.mark.skipif(not (sys._is_gil_enabled() is False), reason=\"Fixture state check\")\ndef test_gil():\n    assert not sys._is_gil_enabled()\n"
+    },
+    {
+      "id": "identity_negated_class",
+      "form": "identity_negated",
+      "scope": "class",
+      "source_template": "import sys\nimport sysconfig\nimport pytest\nimport {module}\n\n@pytest.mark.skipif(not (sys._is_gil_enabled() is False), reason=\"Fixture state check\")\nclass TestGIL:\n    def test_gil(self):\n        assert not sys._is_gil_enabled()\n"
+    },
+    {
+      "id": "identity_negated_module",
+      "form": "identity_negated",
+      "scope": "module",
+      "source_template": "import sys\nimport sysconfig\nimport pytest\nimport {module}\n\npytestmark = pytest.mark.skipif(not (sys._is_gil_enabled() is False), reason=\"Fixture state check\")\ndef test_gil():\n    assert not sys._is_gil_enabled()\n"
+    },
+    {
+      "id": "equals_true_function",
+      "form": "equals_true",
+      "scope": "function",
+      "source_template": "import sys\nimport sysconfig\nimport pytest\nimport {module}\n\n@pytest.mark.skipif(sys._is_gil_enabled() == True, reason=\"Fixture state check\")\ndef test_gil():\n    assert not sys._is_gil_enabled()\n"
+    },
+    {
+      "id": "equals_true_class",
+      "form": "equals_true",
+      "scope": "class",
+      "source_template": "import sys\nimport sysconfig\nimport pytest\nimport {module}\n\n@pytest.mark.skipif(sys._is_gil_enabled() == True, reason=\"Fixture state check\")\nclass TestGIL:\n    def test_gil(self):\n        assert not sys._is_gil_enabled()\n"
+    },
+    {
+      "id": "equals_true_module",
+      "form": "equals_true",
+      "scope": "module",
+      "source_template": "import sys\nimport sysconfig\nimport pytest\nimport {module}\n\npytestmark = pytest.mark.skipif(sys._is_gil_enabled() == True, reason=\"Fixture state check\")\ndef test_gil():\n    assert not sys._is_gil_enabled()\n"
+    },
+    {
+      "id": "getattr_fallback_function",
+      "form": "getattr_fallback",
+      "scope": "function",
+      "source_template": "import sys\nimport sysconfig\nimport pytest\nimport {module}\n\n@pytest.mark.skipif(getattr(sys, \"_is_gil_enabled\", lambda: True)(), reason=\"Fixture state check\")\ndef test_gil():\n    assert not sys._is_gil_enabled()\n"
+    },
+    {
+      "id": "getattr_fallback_class",
+      "form": "getattr_fallback",
+      "scope": "class",
+      "source_template": "import sys\nimport sysconfig\nimport pytest\nimport {module}\n\n@pytest.mark.skipif(getattr(sys, \"_is_gil_enabled\", lambda: True)(), reason=\"Fixture state check\")\nclass TestGIL:\n    def test_gil(self):\n        assert not sys._is_gil_enabled()\n"
+    },
+    {
+      "id": "getattr_fallback_module",
+      "form": "getattr_fallback",
+      "scope": "module",
+      "source_template": "import sys\nimport sysconfig\nimport pytest\nimport {module}\n\npytestmark = pytest.mark.skipif(getattr(sys, \"_is_gil_enabled\", lambda: True)(), reason=\"Fixture state check\")\ndef test_gil():\n    assert not sys._is_gil_enabled()\n"
+    },
+    {
+      "id": "build_not_function",
+      "form": "build_not",
+      "scope": "function",
+      "source_template": "import sys\nimport sysconfig\nimport pytest\nimport {module}\n\n@pytest.mark.skipif(not sysconfig.get_config_var(\"Py_GIL_DISABLED\"), reason=\"Fixture state check\")\ndef test_gil():\n    assert not sys._is_gil_enabled()\n"
+    },
+    {
+      "id": "build_not_class",
+      "form": "build_not",
+      "scope": "class",
+      "source_template": "import sys\nimport sysconfig\nimport pytest\nimport {module}\n\n@pytest.mark.skipif(not sysconfig.get_config_var(\"Py_GIL_DISABLED\"), reason=\"Fixture state check\")\nclass TestGIL:\n    def test_gil(self):\n        assert not sys._is_gil_enabled()\n"
+    },
+    {
+      "id": "build_not_module",
+      "form": "build_not",
+      "scope": "module",
+      "source_template": "import sys\nimport sysconfig\nimport pytest\nimport {module}\n\npytestmark = pytest.mark.skipif(not sysconfig.get_config_var(\"Py_GIL_DISABLED\"), reason=\"Fixture state check\")\ndef test_gil():\n    assert not sys._is_gil_enabled()\n"
+    },
+    {
+      "id": "build_zero_function",
+      "form": "build_zero",
+      "scope": "function",
+      "source_template": "import sys\nimport sysconfig\nimport pytest\nimport {module}\n\n@pytest.mark.skipif(sysconfig.get_config_var(\"Py_GIL_DISABLED\") == 0, reason=\"Fixture state check\")\ndef test_gil():\n    assert not sys._is_gil_enabled()\n"
+    },
+    {
+      "id": "build_zero_class",
+      "form": "build_zero",
+      "scope": "class",
+      "source_template": "import sys\nimport sysconfig\nimport pytest\nimport {module}\n\n@pytest.mark.skipif(sysconfig.get_config_var(\"Py_GIL_DISABLED\") == 0, reason=\"Fixture state check\")\nclass TestGIL:\n    def test_gil(self):\n        assert not sys._is_gil_enabled()\n"
+    },
+    {
+      "id": "build_zero_module",
+      "form": "build_zero",
+      "scope": "module",
+      "source_template": "import sys\nimport sysconfig\nimport pytest\nimport {module}\n\npytestmark = pytest.mark.skipif(sysconfig.get_config_var(\"Py_GIL_DISABLED\") == 0, reason=\"Fixture state check\")\ndef test_gil():\n    assert not sys._is_gil_enabled()\n"
+    },
+    {
+      "id": "never_skip_function",
+      "form": "never_skip",
+      "scope": "function",
+      "source_template": "import sys\nimport sysconfig\nimport pytest\nimport {module}\n\n@pytest.mark.skipif(False, reason=\"Fixture state check\")\ndef test_gil():\n    assert not sys._is_gil_enabled()\n"
+    },
+    {
+      "id": "never_skip_class",
+      "form": "never_skip",
+      "scope": "class",
+      "source_template": "import sys\nimport sysconfig\nimport pytest\nimport {module}\n\n@pytest.mark.skipif(False, reason=\"Fixture state check\")\nclass TestGIL:\n    def test_gil(self):\n        assert not sys._is_gil_enabled()\n"
+    },
+    {
+      "id": "never_skip_module",
+      "form": "never_skip",
+      "scope": "module",
+      "source_template": "import sys\nimport sysconfig\nimport pytest\nimport {module}\n\npytestmark = pytest.mark.skipif(False, reason=\"Fixture state check\")\ndef test_gil():\n    assert not sys._is_gil_enabled()\n"
+    },
+    {
+      "id": "always_skip_function",
+      "form": "always_skip",
+      "scope": "function",
+      "source_template": "import sys\nimport sysconfig\nimport pytest\nimport {module}\n\n@pytest.mark.skipif(True, reason=\"Fixture state check\")\ndef test_gil():\n    assert not sys._is_gil_enabled()\n"
+    },
+    {
+      "id": "always_skip_class",
+      "form": "always_skip",
+      "scope": "class",
+      "source_template": "import sys\nimport sysconfig\nimport pytest\nimport {module}\n\n@pytest.mark.skipif(True, reason=\"Fixture state check\")\nclass TestGIL:\n    def test_gil(self):\n        assert not sys._is_gil_enabled()\n"
+    },
+    {
+      "id": "always_skip_module",
+      "form": "always_skip",
+      "scope": "module",
+      "source_template": "import sys\nimport sysconfig\nimport pytest\nimport {module}\n\npytestmark = pytest.mark.skipif(True, reason=\"Fixture state check\")\ndef test_gil():\n    assert not sys._is_gil_enabled()\n"
+    },
+    {
+      "id": "helper_function",
+      "form": "helper",
+      "scope": "function",
+      "source_template": "import sys\nimport sysconfig\nimport pytest\nimport {module}\ndef is_off():\n    return not sys._is_gil_enabled()\n\n@pytest.mark.skipif(not is_off(), reason=\"Fixture state check\")\ndef test_gil():\n    assert not sys._is_gil_enabled()\n"
+    },
+    {
+      "id": "helper_class",
+      "form": "helper",
+      "scope": "class",
+      "source_template": "import sys\nimport sysconfig\nimport pytest\nimport {module}\ndef is_off():\n    return not sys._is_gil_enabled()\n\n@pytest.mark.skipif(not is_off(), reason=\"Fixture state check\")\nclass TestGIL:\n    def test_gil(self):\n        assert not sys._is_gil_enabled()\n"
+    },
+    {
+      "id": "helper_module",
+      "form": "helper",
+      "scope": "module",
+      "source_template": "import sys\nimport sysconfig\nimport pytest\nimport {module}\ndef is_off():\n    return not sys._is_gil_enabled()\n\npytestmark = pytest.mark.skipif(not is_off(), reason=\"Fixture state check\")\ndef test_gil():\n    assert not sys._is_gil_enabled()\n"
+    },
+    {
+      "id": "decorated_helper_function",
+      "form": "decorated_helper",
+      "scope": "function",
+      "source_template": "import sys\nimport sysconfig\nimport pytest\nimport {module}\ndef identity(f):\n    return f\n@identity\ndef is_on():\n    return sys._is_gil_enabled()\n\n@pytest.mark.skipif(is_on(), reason=\"Fixture state check\")\ndef test_gil():\n    assert not sys._is_gil_enabled()\n"
+    },
+    {
+      "id": "decorated_helper_class",
+      "form": "decorated_helper",
+      "scope": "class",
+      "source_template": "import sys\nimport sysconfig\nimport pytest\nimport {module}\ndef identity(f):\n    return f\n@identity\ndef is_on():\n    return sys._is_gil_enabled()\n\n@pytest.mark.skipif(is_on(), reason=\"Fixture state check\")\nclass TestGIL:\n    def test_gil(self):\n        assert not sys._is_gil_enabled()\n"
+    },
+    {
+      "id": "decorated_helper_module",
+      "form": "decorated_helper",
+      "scope": "module",
+      "source_template": "import sys\nimport sysconfig\nimport pytest\nimport {module}\ndef identity(f):\n    return f\n@identity\ndef is_on():\n    return sys._is_gil_enabled()\n\npytestmark = pytest.mark.skipif(is_on(), reason=\"Fixture state check\")\ndef test_gil():\n    assert not sys._is_gil_enabled()\n"
+    },
+    {
+      "id": "truthy_and_function",
+      "form": "truthy_and",
+      "scope": "function",
+      "source_template": "import sys\nimport sysconfig\nimport pytest\nimport {module}\n\n@pytest.mark.skipif(sys._is_gil_enabled() and sysconfig.get_config_var(\"Py_GIL_DISABLED\"), reason=\"Fixture state check\")\ndef test_gil():\n    assert not sys._is_gil_enabled()\n"
+    },
+    {
+      "id": "truthy_and_class",
+      "form": "truthy_and",
+      "scope": "class",
+      "source_template": "import sys\nimport sysconfig\nimport pytest\nimport {module}\n\n@pytest.mark.skipif(sys._is_gil_enabled() and sysconfig.get_config_var(\"Py_GIL_DISABLED\"), reason=\"Fixture state check\")\nclass TestGIL:\n    def test_gil(self):\n        assert not sys._is_gil_enabled()\n"
+    },
+    {
+      "id": "truthy_and_module",
+      "form": "truthy_and",
+      "scope": "module",
+      "source_template": "import sys\nimport sysconfig\nimport pytest\nimport {module}\n\npytestmark = pytest.mark.skipif(sys._is_gil_enabled() and sysconfig.get_config_var(\"Py_GIL_DISABLED\"), reason=\"Fixture state check\")\ndef test_gil():\n    assert not sys._is_gil_enabled()\n"
+    },
+    {
+      "id": "string_condition_function",
+      "form": "string_condition",
+      "scope": "function",
+      "source_template": "import sys\nimport sysconfig\nimport pytest\nimport {module}\n\n@pytest.mark.skipif('sys._is_gil_enabled()', reason=\"Fixture state check\")\ndef test_gil():\n    assert not sys._is_gil_enabled()\n"
+    },
+    {
+      "id": "string_condition_class",
+      "form": "string_condition",
+      "scope": "class",
+      "source_template": "import sys\nimport sysconfig\nimport pytest\nimport {module}\n\n@pytest.mark.skipif('sys._is_gil_enabled()', reason=\"Fixture state check\")\nclass TestGIL:\n    def test_gil(self):\n        assert not sys._is_gil_enabled()\n"
+    },
+    {
+      "id": "string_condition_module",
+      "form": "string_condition",
+      "scope": "module",
+      "source_template": "import sys\nimport sysconfig\nimport pytest\nimport {module}\n\npytestmark = pytest.mark.skipif('sys._is_gil_enabled()', reason=\"Fixture state check\")\ndef test_gil():\n    assert not sys._is_gil_enabled()\n"
+    }
+  ],
+  "rule": "Post-freeze expanded fixture validation; no analyzer changes during execution. Not an independently authored or random benchmark. Ground truth: legacy skips and declared passes => state-selective masking. Always-skipped is a distinct outcome, not a selective-mask negative certification."
+}

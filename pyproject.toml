@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "gil-evidence"
+version = "0.1.0"
+description = "Experimental static checks for GIL-state evidence in Python tests"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {file = "LICENSE"}
+classifiers = ["Development Status :: 3 - Alpha", "Programming Language :: Python :: 3", "Topic :: Software Development :: Testing"]
+
+[project.urls]
+Repository = "https://github.com/sarpotdarsoham/gil-evidence"
+
+[project.scripts]
+gil-evidence = "gil_evidence:main"
+
+[tool.setuptools]
+py-modules = ["gil_evidence", "ci_evidence", "guard_evidence"]

@@ -1,0 +1,15 @@
+__pycache__/
+*.py[cod]
+*.so
+*.dylib
+*.egg-info/
+.venv/
+build/
+dist/
+.pytest_cache/
+validation/runtime/pytestdeps/
+validation/runtime/guard_cases/
+validation/runtime/expanded_guard_cases/
+results/*.json
+!results/expanded_guard_matrix_freeze.json
+results/*.txt
